@@ -1,0 +1,6 @@
+Consists of two main components: 
+[1] downloader 
+[2] uploader  
+
+TO CHECK 
+[ ] multiple restarts does not overwrite the directories 

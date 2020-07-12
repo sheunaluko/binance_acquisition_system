@@ -1,0 +1,1 @@
+ls -Rl $1 | awk '/json/' | awk '{print $9 " " $5}'
