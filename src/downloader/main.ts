@@ -20,6 +20,7 @@ main()
 
 
 
+
 // -------------------------------------------------- 
 
 async function main() {
@@ -51,7 +52,7 @@ async function main() {
     } , log)
     
     
-     let futures_ws = util.get_reconnecting_ws(futures_ws_url, function(d : any) {
+    let futures_ws = util.get_reconnecting_ws(futures_ws_url, function(d : any) {
 	//immediately append the acquisition time stamp 
 	d.data.time = (new Date).getTime() 
 	 
@@ -66,6 +67,8 @@ async function main() {
 	} 
 
     } , log)
+
+
     
     
 } 
