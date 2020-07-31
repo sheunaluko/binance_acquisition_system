@@ -1,7 +1,17 @@
 //import the tidyscripts deno modules 
 
-import * as tsd from "../../tidyscripts/src/deno/index.ts" //may need edit 
+export * as tsd from "../../tidyscripts/src/deno/index.ts" //may need edit 
 
-export {tsd} 
+
+export {Status, 
+	Result, 
+	AsyncResult, 
+	AsyncResults} from "../../tidyscripts/src/common/util/types.ts" 
+
+
+
+
+
+
 
 
