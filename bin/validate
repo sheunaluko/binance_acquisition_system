@@ -1,0 +1,1 @@
+deno run --allow-read ./src/downloader/validator.ts $1
