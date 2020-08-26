@@ -2,3 +2,4 @@ data/*
 upload.log
 info/logfile
 info/trade_ids
+synced_files
