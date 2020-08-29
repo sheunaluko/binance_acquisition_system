@@ -1,0 +1,9 @@
+day="$1" 
+daydir="synced_files/crypto_market_data_1/$day" 
+
+# first make the directory 
+mkdir -p $daydir 
+
+# now we run the gsutil command to sync all files for that day 
+gsutil -m rsync -r "gs://crypto_market_data_1/$day" $daydir 
+

@@ -1,0 +1,7 @@
+mkdir -p synced_files/crypto_market_data_1; 
+d="`pwd`/synced_files/crypto_market_data_1"
+
+gsutil -m rsync -r -d  gs://crypto_market_data_1 $d
+
+
+

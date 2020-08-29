@@ -1,0 +1,2 @@
+1. run intial_sync to download the data for the first time 
+2. on subsequent syncs instead run resync 

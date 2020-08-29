@@ -1,0 +1,20 @@
+last_day=`./bin/last_data_day_downloaded`
+
+echo "Last retrieved day: $last_day" 
+
+ds=`gsutil ls  gs://crypto_market_data_1` 
+
+for day in $ds; do 
+
+day=`basename $day` 
+
+#echo $last_day 
+#echo $day 
+
+if [[ "$day" > "$last_day" ]] ;
+then 
+  d=`basename $day` ; 
+  echo "Will download: $d" 
+  ./bin/download_day "$d"  
+fi 
+done
