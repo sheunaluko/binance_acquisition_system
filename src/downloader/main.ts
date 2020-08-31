@@ -39,7 +39,9 @@ var {last_trades} = run_initialization()
 /* start stuff  */ 
 log("Initializing") 
 
-let run_time_ms = 60*60*1000 //re-connect every hour
+let run_time_ms = 24*60*60*1000 //re-connect interval in ms
+//interestingly - had a bug where there were more than 1000 trades happening during the reconnection --
+//for now, its not perfect, but i'm just gonna change reconnect interval to 1dx
 
 
 //get global refs so we can disconnect them 
