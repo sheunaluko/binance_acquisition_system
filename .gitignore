@@ -3,3 +3,5 @@ upload.log
 info/logfile
 info/trade_ids
 synced_files
+src/node/node_modules/*
+src/node/package-lock.json
