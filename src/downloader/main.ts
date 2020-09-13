@@ -10,14 +10,19 @@
    Then it dumps the buffer to disk but only those IDs for each pair that 
    have not already been dumped 
    
-   [ ] TODO 
-   I am close to complete, however I have an issue 
-   - When I run the validator script I get an error -- and it actually appears 
-   that there are gaps in my data associated with the syncing ... so somehow 
-   its not being written by the sink 
-   - have to figure this out... one thing to do -- which would probably be smart [ ] 
-   - is to edit the symbols file to ONLY HVE ONE SYMBOL 
+   Update [Sun Sep 13 15:42:07 PDT 2020] 
+   - I implemented the above and was relaunching the process each hour however I encountered 
+   the following bug: 
+   - There would be consistenetly missing data each hour because the maximum number of aggregate 
+   trade ids that can be downloaded at one time for each pair is 1000 i believe, so I  
+   noticed that this was getting maxed out and thus data was missing. 
    
+   To temporarily fix this I changed the restart interval to 24 hours but still have very slight 
+   missing data. 
+    - Another potential fix: check if 1000 elements were retrieved and if so recursively try to get 
+    the previous data 
+    
+    
    
 */
 
